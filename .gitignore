@@ -1,3 +1,19 @@
+# --- Build output ---
+build/
+
+# --- Runtime data ---
+data/
+
+# --- VS Code (shared configs are tracked, personal ones are not) ---
+.vscode/settings.json
+.vscode/extensions.json
+.vscode/*.log
+
+# --- macOS ---
+.DS_Store
+
+# --- C/C++ artifacts ---
+
 # Prerequisites
 *.d
 

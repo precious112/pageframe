@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug pageframe",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/pageframe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build (Debug)",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Debug test",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/${input:testName}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Run Tests",
+            "stopAtEntry": false
+        }
+    ],
+    "inputs": [
+        {
+            "id": "testName",
+            "type": "promptString",
+            "description": "Test binary name (e.g., test_example)",
+            "default": "test_example"
+        }
+    ]
+}
